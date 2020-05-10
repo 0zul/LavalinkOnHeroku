@@ -1,0 +1,29 @@
+{
+    "name": "Lavalink On Heroku",
+    "description": "A test Heroku app to deploy your own lavalink server.",
+    "keywords": [
+      "Lavalink",
+      "lavalink",
+      "discord-music-streaming",
+      "LavalinkOnHeroku",
+      "lavalink-on-heroku"
+    ],
+        "scripts": {
+          "postdeploy": "npm start"
+        },
+    "repository": "https://github.com/IamTheRealSami/LavalinkOnHeroku",
+    "env": {
+      "PASS": {
+        "description": "Set this for authorization for your lavalink server. (default: youshallnotpass)"
+      }
+    },
+    "buildpacks": [
+      {
+        "url": "heroku/nodejs"
+
+      },
+      {
+          "url": "heroku/java"
+      }
+    ]
+  }
