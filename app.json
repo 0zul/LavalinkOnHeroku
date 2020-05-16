@@ -8,9 +8,6 @@
       "LavalinkOnHeroku",
       "lavalink-on-heroku"
     ],
-        "scripts": {
-          "postdeploy": "npm start"
-        },
     "repository": "https://github.com/IamTheRealSami/LavalinkOnHeroku",
     "env": {
       "PASS": {
