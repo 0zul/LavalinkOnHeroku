@@ -65,6 +65,7 @@ function keepAlive() {
     let count = 0;
     setInterval(() =>
         fetch(`http://${process.env.HEROKU_APP_NAME}.herokuapp.com`)
-            .then(() => console.log(`[${++count}] Kept website alive.`))
+            .then(() => console.log(`[${++count}] Kept server alive.`)
+            .catch(() => console.log(`Failed to keep server alive.`))
     , 5 * 60 * 1000);
 }
