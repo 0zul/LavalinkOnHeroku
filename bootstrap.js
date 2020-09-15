@@ -50,8 +50,7 @@ function startLavalink() {
         console.log(`Lavalink exited with code ${code}`);
     });
     
-    if (process.env.KEEP_ALIVE && process.env.HEROKU_APP_NAME)
-        keepAlive();
+    keepAlive();
 }
 
 const cdn = 'https://cdn.glitch.com/5d4f310e-9fae-4c7b-968d-7bf316844140%2FLavalink.jar?v=1594726273497'
@@ -59,11 +58,12 @@ download(cdn, './Lavalink.jar', startLavalink)
 
 function keepAlive() {
     console.log('Keeping alive.');
+
     const fetch = require('node-fetch');
 
     let count = 0;
     setInterval(() =>
-    fetch(`https://${process.env.HEROKU_APP_NAME}.herokuapp.com`)
-        .then(() => console.log(`[${++count}] Kept website alive.`))
+        fetch(`http://${process.env.HEROKU_APP_NAME}.herokuapp.com`)
+            .then(() => console.log(`[${++count}] Kept website alive.`))
     , 5 * 60 * 1000);
 }

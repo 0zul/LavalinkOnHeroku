@@ -1,6 +1,6 @@
 {
     "name": "Lavalink On Heroku",
-    "description": "A test Heroku app to deploy your own lavalink server.",
+    "description": "A Heroku app to deploy your own Lavalink server.",
     "keywords": [
       "Lavalink",
       "lavalink",
@@ -13,23 +13,17 @@
       "PASS": {
         "description": "Set this for authorization for your lavalink server. (default: youshallnotpass)",
         "value": "youshallnotpass"
-      },
-      "PORT": {
-        "description": "The port of the Lavalink server. (default: 2333)",
-        "value": "2333"
-      },
-      "KEEP_ALIVE": {
-        "description": "Whether to keep the server alive 24/7 (may cost dyno hours).",
-        "value": true
       }
     },
+    "labs": [
+      "runtime-dyno-metadata"
+    ],
     "buildpacks": [
       {
         "url": "heroku/nodejs"
-
       },
       {
-          "url": "heroku/java"
+        "url": "heroku/java"
       }
     ]
   }
