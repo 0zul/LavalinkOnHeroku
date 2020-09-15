@@ -1,4 +1,5 @@
 # heroku-lavalink
+Now with internal pinging.
 
 Easily deploy a lavalink server on heroku.
 This is a very elementary and barebones approach, but reliable nonetheless.

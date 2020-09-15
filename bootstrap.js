@@ -50,7 +50,8 @@ function startLavalink() {
         console.log(`Lavalink exited with code ${code}`);
     });
     
-    keepAlive();
+    if (process.env.APP_NAME)
+        keepAlive();
 }
 
 const cdn = 'https://cdn.glitch.com/5d4f310e-9fae-4c7b-968d-7bf316844140%2FLavalink.jar?v=1594726273497'
