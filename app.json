@@ -11,7 +11,12 @@
     "repository": "https://github.com/IamTheRealSami/LavalinkOnHeroku",
     "env": {
       "PASS": {
-        "description": "Set this for authorization for your lavalink server. (default: youshallnotpass)"
+        "description": "Set this for authorization for your lavalink server. (default: youshallnotpass)",
+        "value": "youshallnotpass"
+      },
+      "PORT": {
+        "description": "The port of the Lavalink server. (default: 2333)",
+        "value": "2333"
       }
     },
     "buildpacks": [

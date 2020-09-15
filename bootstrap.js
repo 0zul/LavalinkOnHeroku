@@ -1,6 +1,6 @@
-
 const fs = require('fs')
 const https = require('https')
+
 let application = fs.readFileSync('./application.yml', 'utf8')
 
 if (process.env.PORT) {
@@ -49,7 +49,19 @@ function startLavalink() {
     child.on('close', (code) => {
         console.log(`Lavalink exited with code ${code}`);
     });
+    
+    keepAlive();
 }
 
 const cdn = 'https://cdn.glitch.com/5d4f310e-9fae-4c7b-968d-7bf316844140%2FLavalink.jar?v=1594726273497'
 download(cdn, './Lavalink.jar', startLavalink)
+
+function keepAlive() {
+    const fetch = require('node-fetch');
+
+    let count = 0;
+    setInterval(() =>
+    fetch(`http://localhost:${process.env.PORT}`)
+        .then(() => console.log(`[${++count}] Kept website alive.`))
+    , 5 * 60 * 1000);
+}
