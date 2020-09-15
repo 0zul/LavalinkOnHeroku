@@ -17,6 +17,10 @@
       "PORT": {
         "description": "The port of the Lavalink server. (default: 2333)",
         "value": "2333"
+      },
+      "KEEP_ALIVE": {
+        "description": "Whether to keep the server alive 24/7 (may cost dyno hours).",
+        "value": true
       }
     },
     "buildpacks": [
