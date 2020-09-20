@@ -50,7 +50,7 @@ function startLavalink() {
         console.log(`Lavalink exited with code ${code}`);
     });
     
-    if (process.env.APP_NAME)
+    if (process.env.HEROKU_APP_NAME)
         keepAlive();
 }
 
