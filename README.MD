@@ -1,4 +1,5 @@
 # heroku-lavalink
+Now with internal pinging.
 
 Easily deploy a lavalink server on heroku.
 This is a very elementary and barebones approach, but reliable nonetheless.
@@ -25,7 +26,7 @@ If heroku is unable to automatically configure buildpacks, go to your projects s
 
 **Easy Heroku Deploy Button**
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/IamTheRealSami/LavalinkOnHeroku/tree/auto)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/theADAMJR/LavalinkOnHeroku/tree/auto)
 
 **Notes:** 
 1. After changing PASS you must redeploy or click the More menu and *restart all dynos*.
