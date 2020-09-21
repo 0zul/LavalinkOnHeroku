@@ -66,6 +66,6 @@ function keepAlive() {
     setInterval(() =>
         fetch(`http://${process.env.APP_NAME}.herokuapp.com`)
             .then(() => console.log(`[${++count}] Kept server alive.`)
-            .catch(() => console.log(`Failed to keep server alive.`))
+            .catch(() => console.log(`Failed to keep server alive.`)
         ), 5 * 60 * 1000);
 }
