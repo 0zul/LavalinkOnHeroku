@@ -26,7 +26,7 @@ If heroku is unable to automatically configure buildpacks, go to your projects s
 
 **Easy Heroku Deploy Button**
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/theADAMJR/LavalinkOnHeroku/tree/auto)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/IamTheRealSami/LavalinkOnHeroku/tree/auto)
 
 **Notes:** 
 1. After changing PASS you must redeploy or click the More menu and *restart all dynos*.
