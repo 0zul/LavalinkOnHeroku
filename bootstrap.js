@@ -1,3 +1,4 @@
+require('dotenv').config();
 const fs = require('fs')
 const https = require('https')
 
@@ -18,7 +19,7 @@ const download = function (url, dest, cb) { //modified code from https://stackov
         response.pipe(file);
         console.log('Downloading Lavalink.jar...')
         file.on('finish', function () {
-            console.log('Downloaded Lavalink.jar')
+            console.log('Finished Downloading Lavalink.jar')
             file.close(cb);
         });
     }).on('error', function (err) {
@@ -54,7 +55,7 @@ function startLavalink() {
         keepAlive();
 }
 
-const cdn = 'https://cdn.glitch.com/5d4f310e-9fae-4c7b-968d-7bf316844140%2FLavalink.jar?v=1604479673677'
+const cdn = 'https://cdn.lavalink.ga/v3.3.2.1/Lavalink.jar'
 download(cdn, './Lavalink.jar', startLavalink)
 
 
@@ -65,7 +66,7 @@ function keepAlive() {
 
     let count = 0;
     setInterval(() =>
-        fetch(`http://${process.env.APP_NAME}.herokuapp.com`)
+        fetch(`http://${process.env.APP_NAME}.herokuapp.com/`, { headers: { Authorization: process.env.PASS } })
             .then(() => console.log(`[${++count}] Kept server alive.`))
             .catch(() => console.log(`Failed to keep server alive.`))
         , 5 * 60 * 1000);
