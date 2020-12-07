@@ -1,0 +1,24 @@
+{
+  "name": "lavalinkonheroku",
+  "version": "3.3.2",
+  "description": "A test heroku app to deploy your own lavalink server",
+  "main": "bootstrap.js",
+  "scripts": {
+    "start": "node .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "IamTheRealSami",
+  "license": "MIT",
+  "dependencies": {
+    "node-fetch": "^2.6.1",
+    "dotenv": "^8.2.0",
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IamTheRealSami/LavalinkOnHeroku.git"
+  },
+  "bugs": {
+    "url": "https://github.com/IamTheRealSami/LavalinkOnHeroku/issues"
+  },
+  "homepage": "https://github.com/IamTheRealSami/LavalinkOnHeroku#readme"
+}
