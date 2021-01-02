@@ -66,7 +66,7 @@ function keepAlive() {
 
     let count = 0;
     setInterval(() =>
-        fetch(`http://${process.env.APP_NAME}/socket.io`, { headers: { Authorization: process.env.PASS } })
+        fetch(`http://${process.env.APP_NAME}/`, { headers: { Authorization: process.env.PASS } })
             .then(() => console.log(`[${++count}] Kept server alive.`))
             .catch(() => console.log(`Failed to keep server alive.`))
         , 1 * 60 * 1000);
