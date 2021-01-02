@@ -66,8 +66,8 @@ function keepAlive() {
 
     let count = 0;
     setInterval(() =>
-        fetch(`http://${process.env.APP_NAME}.herokuapp.com/`, { headers: { Authorization: process.env.PASS } })
+        fetch(`http://${process.env.APP_NAME}/socket.io`, { headers: { Authorization: process.env.PASS } })
             .then(() => console.log(`[${++count}] Kept server alive.`))
             .catch(() => console.log(`Failed to keep server alive.`))
-        , 5 * 60 * 1000);
+        , 1 * 60 * 1000);
 }
