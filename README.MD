@@ -10,6 +10,10 @@ This branch will automatically download the Lavalink.jar, but it may not be late
 
 Current Lavalink release: **v3.3.2.1**
 
+# DEPRECATION NOTICE
+
+I've officially stopped providing any updates to this as it was just made for fun. You're free to fork, make modification and run it on your own heroku client but tbh, why do you wanna do so? Make an account on DigitalOcean using my [link to get free $100 credit to use.](https://m.do.co/c/85f061dbe5c1)
+
 **Using Github Deploy:**
 1. Create a fork of this repo
 2. Navigate to your heroku project @dashboard.heroku.com
@@ -34,4 +38,3 @@ If heroku is unable to automatically configure buildpacks, go to your projects s
 **Notes:** 
 1. After changing PASS you must redeploy or click the More menu and *restart all dynos*.
 2. If heroku is unable to automatically configure buildpacks, go to your projects settings on the heroku website and add java and nodejs.
-
